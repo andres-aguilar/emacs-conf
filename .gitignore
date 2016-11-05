@@ -1,0 +1,15 @@
+emacs.d/url/cookies
+emacs.d/places
+emacs.d/elpa
+emacs.d/eshell
+emacs.d/auto-save-list
+emacs.d/ac-comphist.dat
+emacs.d/ido.last
+emacs.d/snippets
+emacs.d/abbrev_defs
+emacs.d/network-security.data
+
+*~
+.\#*
+\#*
+flycheck*
