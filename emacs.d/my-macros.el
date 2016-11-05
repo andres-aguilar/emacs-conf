@@ -12,10 +12,12 @@
 ;;
 
 (fset 'my-eval-line
-   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([1 67108896 5 134217847 24 111 25 return 24 111 14 1] 0 "%d")) arg)))
+   (lambda (&optional arg) "Keyboard macro." (interactive "p")
+   (kmacro-exec-ring-item (quote ([1 67108896 5 134217847 24 111 25 return 24 111 14 1] 0 "%d")) arg)))
 
 (fset 'my-eval-region
-   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([134217847 24 111 25 return 24 111 14 1] 0 "%d")) arg)))
+   (lambda (&optional arg) "Keyboard macro." (interactive "p")
+   (kmacro-exec-ring-item (quote ([134217847 24 111 25 return 24 111 14 1] 0 "%d")) arg)))
 
 ;;
 ;; --- Teclas de función personalizadas ---
@@ -23,8 +25,9 @@
 
 (global-set-key [f1] 'my-eval-line)      ;; Execute line    (works with R and Python)
 (global-set-key [f2] 'my-eval-region)    ;; Execute region  (works with R and Python)
+(global-set-key [f5] 'shell)             ;; Launch system shell 
 (global-set-key [f6] 'eshell)            ;; launch eshell
-(global-set-key [f7] 'ipython)           ;; Launch ipython
-(global-set-key [f8] 'R)                 ;; Launch R
-(global-set-key [f11] 'ess-eval-region)
-(global-set-key [f12] 'ess-eval-region-or-line-and-step)
+;(global-set-key [f7] 'ipython)           ;; Launch ipython
+;(global-set-key [f8] 'R)                 ;; Launch R
+;(global-set-key [f11] 'ess-eval-region)
+;(global-set-key [f12] 'ess-eval-region-or-line-and-step)
